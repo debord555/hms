@@ -1,31 +1,32 @@
-/*
- * This class is only for testing authentication.
- * Must be removed in production.
- */
+// /*
+// * This class is only for testing authentication.
+// * Must be removed in production.
+// */
 
-package com.debord555.hms_backend.misc;
+// package com.debord555.hms_backend.misc;
 
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+// import org.springframework.web.bind.annotation.RestController;
+// import org.springframework.beans.factory.annotation.Autowired;
+// import org.springframework.web.bind.annotation.GetMapping;
 
-import com.debord555.hms_backend.repository.User;
-import com.debord555.hms_backend.repository.UserRepository;
+// import com.debord555.hms_backend.repository.User;
+// import com.debord555.hms_backend.repository.UserRepository;
 
-import java.security.Principal;
+// import java.security.Principal;
 
-// TODO: Remove this class in production
+// // TODO: Remove this class in production
 
-@RestController
-public class Greeter {
+// @RestController
+// public class Greeter {
 
-    @Autowired
-    private UserRepository userRepository;
+// @Autowired
+// private UserRepository userRepository;
 
-    @GetMapping("/api/patient/greet")
-    public String greet(Principal principal) {
-        User user = userRepository.findByPhoneNo(principal.getName()).orElse(null);
-        return String.format("Hello, %s, this is the HMS backend!", user.getFirstName());
-    }
+// @GetMapping("/api/patient/greet")
+// public String greet(Principal principal) {
+// User user = userRepository.findByPhoneNo(principal.getName()).orElse(null);
+// return String.format("Hello, %s, this is the HMS backend!",
+// user.getFirstName());
+// }
 
-}
+// }
